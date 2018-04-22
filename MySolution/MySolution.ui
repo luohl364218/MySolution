@@ -6,14 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>325</height>
+    <width>557</width>
+    <height>521</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MySolution</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#MySolutionClass{
+	background-color: rgb(0, 85, 127);}</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">#centralWidget{
+	background-color: rgb(0, 85, 127);}</string>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -130,6 +138,9 @@
       </item>
      </layout>
     </item>
+    <item row="1" column="0">
+     <widget class="AnalyzeWidget" name="analyzeWidget"/>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -137,7 +148,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
+     <width>557</width>
      <height>26</height>
     </rect>
    </property>
@@ -153,6 +164,13 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>AnalyzeWidget</class>
+   <extends>QWidget</extends>
+   <header>analyzewidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="MySolution.qrc"/>
  </resources>

@@ -33,32 +33,29 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MySolution.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="AnalyzeWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AnalyzeWidgetPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="MySolution.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="AnalyzeWidget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="AnalyzeWidgetPlugin.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="MySolution.ui">
+    <QtUic Include="AnalyzeWidget.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="MySolution.qrc">
+    <QtRcc Include="AnalyzeWidget.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="MySolution.rc" />
   </ItemGroup>
 </Project>
