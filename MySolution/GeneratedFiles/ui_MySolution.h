@@ -26,6 +26,7 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "analyzewidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -47,6 +48,7 @@ public:
     QSpacerItem *horizontalSpacer_3;
     QPushButton *calcButton;
     QSpacerItem *horizontalSpacer_4;
+    AnalyzeWidget *analyzeWidget;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -55,9 +57,13 @@ public:
     {
         if (MySolutionClass->objectName().isEmpty())
             MySolutionClass->setObjectName(QStringLiteral("MySolutionClass"));
-        MySolutionClass->resize(600, 325);
+        MySolutionClass->resize(557, 521);
+        MySolutionClass->setStyleSheet(QLatin1String("#MySolutionClass{\n"
+"	background-color: rgb(0, 85, 127);}"));
         centralWidget = new QWidget(MySolutionClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        centralWidget->setStyleSheet(QLatin1String("#centralWidget{\n"
+"	background-color: rgb(0, 85, 127);}"));
         gridLayout = new QGridLayout(centralWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
@@ -129,10 +135,15 @@ public:
 
         gridLayout->addLayout(verticalLayout, 0, 0, 1, 1);
 
+        analyzeWidget = new AnalyzeWidget(centralWidget);
+        analyzeWidget->setObjectName(QStringLiteral("analyzeWidget"));
+
+        gridLayout->addWidget(analyzeWidget, 1, 0, 1, 1);
+
         MySolutionClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MySolutionClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 26));
+        menuBar->setGeometry(QRect(0, 0, 557, 26));
         MySolutionClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MySolutionClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
